@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 2%; /* near black */
+    --foreground: 210 40% 98%;
+    --card: 220 15% 10%; 
+    --card-foreground: 210 40% 98%;
+    --popover: 220 15% 5%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 120 100% 50%; /* Neon Green */
+    --primary-foreground: 0 0% 2%;
+    
+    --secondary: 217 91% 60%; /* Electric Blue */
+    --secondary-foreground: 210 40% 98%;
+    
+    --accent: 0 100% 50%; /* Bright Red */
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 220 10% 15%;
+    --muted-foreground: 220 15% 65%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 60%; /* Electric Blue for ring */
+    --radius: 0.5rem;
+
+    --risk-low: 145 63% 42%;
+    --risk-medium: 40 96% 54%;
+    --risk-high: 0 84.2% 60.2%;
+  }
+
+  .dark {
+    --background: 0 0% 2%; /* near black */
+    --foreground: 210 40% 98%;
+    --card: 220 15% 10%; 
+    --card-foreground: 210 40% 98%;
+    --popover: 220 15% 5%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 120 100% 50%; /* Neon Green */
+    --primary-foreground: 0 0% 2%;
+    
+    --secondary: 217 91% 60%; /* Electric Blue */
+    --secondary-foreground: 210 40% 98%;
+    
+    --accent: 0 100% 50%; /* Bright Red */
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 220 10% 15%;
+    --muted-foreground: 220 15% 65%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 60%; /* Electric Blue for ring */
+    
+    --risk-low: 145 58% 55%;
+    --risk-medium: 40 96% 54%;
+    --risk-high: 0 72% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-glow {
+    text-shadow: 0 0 8px hsl(var(--primary)), 0 0 20px hsl(var(--primary));
+  }
+  .text-glow-primary {
+    text-shadow: 0 0 8px hsl(var(--primary)), 0 0 20px hsl(var(--primary));
+  }
+  .text-glow-secondary {
+    text-shadow: 0 0 8px hsl(var(--secondary)), 0 0 20px hsl(var(--secondary));
+  }
+  .text-glow-accent {
+    text-shadow: 0 0 8px hsl(var(--accent)), 0 0 20px hsl(var(--accent));
+  }
+  .text-glow-destructive {
+    text-shadow: 0 0 8px hsl(var(--destructive)), 0 0 20px hsl(var(--destructive));
+  }
+}
